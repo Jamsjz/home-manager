@@ -1,4 +1,4 @@
-{ config, pkgs, system, inputs,lib, ... }:
+{ pkgs, system, inputs,... }:
 
 {
   home.username = "viola";
@@ -11,7 +11,7 @@
     ./modules/fonts.nix
     ./modules/waybar.nix
     ./modules/kitty.nix
-    ./modules/dunst.nix
+    # ./modules/dunst.nix
     ./modules/btop.nix
     ./modules/fastfetch.nix
     ./modules/tmux.nix
@@ -24,6 +24,7 @@
     inputs.ghostty.packages.x86_64-linux.default
     maple-mono
     maple-mono-NF
+    hyprpanel
     gruvbox-kvantum
     neovide
     # audio plugins

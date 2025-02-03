@@ -19,7 +19,7 @@
         "blueman-applet"
         "udiskie --no-automount --smart-tray"
         "nm-applet --indicator"
-        "dunst"
+        # "dunst"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "swww-daemon --format xrgb && swww restore"
@@ -294,6 +294,8 @@
 
     extraConfig = ''
 exec-once = [workspace 10 silent] kitty
+exec-once = hyprpanel
+exec-once = [workspace 9 silent] spicetify-nix
 exec-once = [workspace 9 silent] zen-browser
 exec-once = [workspace 8 silent] obsidian
 exec-once = [workspace special silent] spotify
