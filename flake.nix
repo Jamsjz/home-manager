@@ -7,7 +7,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     ghostty.url = "github:ghostty-org/ghostty";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -20,9 +19,6 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system; config.allowUnfree = true;
-        overlays = [
-          inputs.hyprpanel.overlay
-        ];
       };
     in
     {

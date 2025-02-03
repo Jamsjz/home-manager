@@ -188,8 +188,8 @@
       };
 
       windowrulev2 = [
-        "opacity 0.90 0.90,class:^(firefox)$"
-        "opacity 0.90 0.90,class:^(zen-beta)$"
+        "opacity 0.89 0.80,class:^(firefox)$"
+        "opacity 0.80 0.80,class:^(zen-beta)$"
         "opacity 0.90 0.90,class:^(obsidian)$"
         "opacity 0.90 0.90,class:^(librewolf)$"
         "opacity 0.90 0.90,class:^(Brave-browser)$"
@@ -294,10 +294,12 @@
 
     extraConfig = ''
 exec-once = [workspace 10 silent] kitty
-exec-once = hyprpanel
 exec-once = [workspace 9 silent] spicetify-nix
-exec-once = [workspace 9 silent] zen-browser
+exec-once = [workspace 9 silent] zen-beta
 exec-once = [workspace 8 silent] obsidian
+exec-once = [workspace 5 silent] nautilus
+exec-once = [workspace 4 silent] steam
+exec-once = [workspace 3 silent] reaper
 exec-once = [workspace special silent] spotify
 
         monitor = ,preferred,auto,1
