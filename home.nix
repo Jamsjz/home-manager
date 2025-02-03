@@ -31,6 +31,7 @@
     helm
     dragonfly-reverb
     aether-lv2
+    neural-amp-modeler-lv2
     hybridreverb2
     mooSpace
     fverb
