@@ -1,4 +1,4 @@
-{ config, pkgs, system, inputs, ... }:
+{ config, pkgs, system, inputs,lib, ... }:
 
 {
   home.username = "viola";
@@ -17,17 +17,41 @@
     ./modules/tmux.nix
     ./modules/hyprland/default.nix
     ./modules/rofi.nix
-    #./modules/ghostty.nix
-    #./modules/thunderbird.nix
   ];
   home.stateVersion = "24.11";
   home.packages = with pkgs;[
     inputs.zen-browser.packages."${system}".default
-inputs.ghostty.packages.x86_64-linux.default
-
+    inputs.ghostty.packages.x86_64-linux.default
     maple-mono
     maple-mono-NF
     gruvbox-kvantum
+    neovide
+    # audio plugins
+    gxplugins-lv2
+    helm
+    dragonfly-reverb
+    aether-lv2
+    hybridreverb2
+    mooSpace
+    fverb
+    guitarix
+    lsp-plugins
+    x42-plugins
+    x42-gmsynth
+    x42-avldrums
+    chow-tape-model
+    airwindows-lv2
+    chow-kick
+    chow-centaur
+    chow-phaser
+    picoloop
+    sorcer
+    qjackctl
+    carla
+    oxefmsynth
+    ninjas2
+    zam-plugins
+    surge-XT
   ];
 
   home.file = { };
@@ -37,16 +61,5 @@ inputs.ghostty.packages.x86_64-linux.default
     enable = true;
   };
 
-
-  # programs.git = {
-  #   enable = true;
-  #   userName = "Jamsjz";
-  #   userEmail = "gj984233@gmail.com";
-  #   extraConfig = {
-  #     init.defaultBranch = "main";
-  #   };
-  # };
-
   fonts.fontconfig.enable = true;
-
 }

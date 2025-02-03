@@ -187,7 +187,6 @@
         hide_on_key_press = true;
       };
 
-
       windowrulev2 = [
         "opacity 0.90 0.90,class:^(firefox)$"
         "opacity 0.90 0.90,class:^(zen-beta)$"
@@ -282,6 +281,8 @@
         "float,class:^(com.github.unrud.VideoDownloader)$"
         "float,class:^(io.gitlab.adhami3310.Impression)$"
         "float,class:^(io.missioncenter.MissionCenter)$"
+        "nofocus,class:REAPER,title:^$"
+        "move cursor,class:REAPER,floating:1"
       ];
 
 

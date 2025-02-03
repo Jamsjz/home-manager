@@ -14,15 +14,17 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, zen-browser, hyprland,ghostty, ... }@inputs:
+  outputs = { nixpkgs, home-manager, zen-browser, hyprland, ghostty, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
     in
     {
       homeConfigurations."viola" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
+        pkgs = pkgs; # Pass the pkgs argument explicitly
+        modules = [
+          ./home.nix
+        ];
         extraSpecialArgs = {
           inherit inputs system zen-browser hyprland ghostty;
         };

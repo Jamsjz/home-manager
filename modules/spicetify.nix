@@ -7,8 +7,13 @@ let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ 
+    "spotify" 
+    "vital"
+    "bespokesynth"
+    "bespokesynth-with-vst2"
+    "jackass"
+  ];
 
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
