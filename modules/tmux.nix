@@ -122,7 +122,6 @@
       set -g @plugin 'sainnhe/tmux-fzf'
       set -g @resurrect-strategy-vim 'session'
       set -g @plugin 'catppuccin/tmux#v2.1.2'
-set -g @plugin 'tmux-plugins/tmux-battery'
       set -g @catppuccin_window_status_style "rounded"
       run ~/.config/tmux/plugins/tmux/catppuccin.tmux
 
@@ -130,10 +129,10 @@ set -g @plugin 'tmux-plugins/tmux-battery'
       # Make the status line pretty and add some modules
       set -g status-right-length 100
       set -g status-left-length 100
-      set -g status-left ""
+      set -g status-left "#{E:@catppuccin_status_session}"
       set -g status-right "#{E:@catppuccin_status_application}"
-      set -ag status-right "#{E:@catppuccin_status_session}"
       set -agF status-right "#{E:@catppuccin_status_battery}"
+      set -g @catppuccin_status_default "on"
 
       # design tweaks
       # # don't do anything when a 'bell' rings
@@ -146,6 +145,7 @@ set -g @plugin 'tmux-plugins/tmux-battery'
       bind f run-shell '~/.local/share/bin/tmux.sh'
 
 
+      set -g @plugin 'tmux-plugins/tmux-battery'
       run '~/.config/tmux/plugins/tpm/tpm'
     '';
   };

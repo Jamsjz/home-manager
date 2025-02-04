@@ -32,6 +32,7 @@
     dragonfly-reverb
     aether-lv2
     neural-amp-modeler-lv2
+    proteus
     hybridreverb2
     mooSpace
     fverb
