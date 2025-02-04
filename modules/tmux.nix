@@ -141,6 +141,7 @@
       set -g visual-silence off
       setw -g monitor-activity off
       set -g bell-action none
+      set -g allow-passthrough on
 
       bind f run-shell '~/.local/share/bin/tmux.sh'
 
