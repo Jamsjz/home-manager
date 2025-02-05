@@ -17,6 +17,8 @@
       "$mainMod+Alt , T ,exec, $t_sec"
       "$mainMod, E, exec, $file"
       "$mainMod, n ,  exec, $editor"
+      "$mainMod+ctrl+alt,r,exec,obs-cmd --websocket obsws://localhost:4455/111111 recording toggle"
+      "$mainMod+ctrl+alt,p,exec,obs-cmd --websocket obsws://localhost:4455/111111 recording toggle-pause"
       "$mainMod, c ,  exec, $editor_config"
       "$mainMod+Shift, RETURN, exec, $emacs"
       "$mainMod, B, exec, $browser"
