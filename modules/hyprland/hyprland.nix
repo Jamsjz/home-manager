@@ -101,8 +101,8 @@
 
 
       decoration = {
-        active_opacity = 1.0;
-        inactive_opacity = 0.5;
+        active_opacity = 0.9;
+        inactive_opacity = 0.65;
         rounding = 8;
 
 
@@ -117,18 +117,6 @@
           new_optimizations = true;
           xray = true;
         };
-
-        #     blur {
-        #         enabled = yes
-        # #size = 0
-        # #passes = 0
-        #         size = 2
-        #         passes = 3
-        #         new_optimizations = on
-        #         ignore_opacity = on
-        #         xray = false
-        #     }
-
       };
 
 
@@ -159,15 +147,11 @@
           "windowsOut, 1, 3, md3_accel, popin 60%"
           "border, 1, 10, default"
           "fade, 1, 3, md3_decel"
-          #"layers, 1, 2, md3_decel, slide"
           "layersIn, 1, 3, menu_decel, slide"
           "layersOut, 1, 1.6, menu_accel"
           "fadeLayersIn, 1, 2, menu_decel"
           "fadeLayersOut, 1, 4.5, menu_accel"
           "workspaces, 1, 7, menu_decel, slidevert"
-          #"workspaces, 1, 2.5, softAcDecel, slide"
-          #"workspaces, 1, 7, menu_decel, slidefade 15%"
-          #"specialWorkspace, 1, 3, md3_decel, slidefadevert 15%"
           "specialWorkspace, 1, 3, md3_decel, slidevert"
         ];
       };
@@ -189,7 +173,7 @@
 
       windowrulev2 = [
         "opacity 0.89 0.80,class:^(firefox)$"
-        "opacity 0.80 0.80,class:^(zen-beta)$"
+        "opacity 0.90 0.90,class:^(zen)$"
         "opacity 0.90 0.90,class:^(obsidian)$"
         "opacity 0.90 0.90,class:^(librewolf)$"
         "opacity 0.90 0.90,class:^(Brave-browser)$"
@@ -298,7 +282,7 @@ exec-once = [workspace 9 silent] spicetify-nix
 exec-once = [workspace 9 silent] zen-beta
 exec-once = [workspace 8 silent] obsidian
 exec-once = [workspace 5 silent] nautilus
-exec-once = [workspace 4 silent] steam
+exec-once = [workspace 4 silent] lutrix
 exec-once = [workspace 3 silent] reaper
 exec-once = [workspace special silent] spotify
 
@@ -322,9 +306,6 @@ env = MOZ_ENABLE_WAYLAND,1
 env = GDK_SCALE,1
 #env = MANPAGER,'nvim +Man!'
 env = MOUSE,"0"
-
-
-
 layerrule = blur,rofi
 layerrule = blur,waybar
 layerrule = blur,kitty
