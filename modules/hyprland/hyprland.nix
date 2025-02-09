@@ -164,6 +164,8 @@
       gestures = {
         workspace_swipe = true;
         workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 200;
+        workspace_swipe_cancel_ratio = 0.3;
       };
 
       cursor = {
