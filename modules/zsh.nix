@@ -190,6 +190,7 @@ source $HOME/.local/share/bin/_zsh-completions
       [ -s "/home/viola/.bun/_bun" ] && source "/home/viola/.bun/_bun"
       export BUN_INSTALL="$HOME/.bun"
       export PATH="$BUN_INSTALL/bin:$PATH"
+      export PATH="$HOME/.local/bin:$PATH"
 
 
 
@@ -204,6 +205,7 @@ function vi-paste-clipboard() {
     local content=$(wl-paste) # Get the clipboard content
     LBUFFER+="$content" # Append it to the left buffer (where command is typed)
 }
+source $HOME/.config/nvims/nvim_appnames
 
 # Bind the function to the 'p' key in Vim mode
 zle -N vi-paste-clipboard
