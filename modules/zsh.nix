@@ -191,6 +191,7 @@ source $HOME/.local/share/bin/_zsh-completions
       export BUN_INSTALL="$HOME/.bun"
       export PATH="$BUN_INSTALL/bin:$PATH"
       export PATH="$HOME/.local/bin:$PATH"
+      export PATH="$HOME/.config/emacs/bin:$PATH"
 
 
 
