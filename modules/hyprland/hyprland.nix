@@ -67,7 +67,7 @@
         "$term" = "kitty";
         "$editor" = "neovide";
         "$editor_config" = "neovide ~/.config/nvim/";
-        "$file" = "thunar";
+        "$file" = "nautilus";
         "$file_terminal" = "kitty yazi";
         "$browser" = "zen";
         "$t_sec" = "ghostty";
