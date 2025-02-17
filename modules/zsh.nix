@@ -265,7 +265,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-if ls *.py &>/dev/null; then
+if ls *.py &>/dev/null | ls *.ipynb &>/dev/null; then
   condas
 fi
     '';
