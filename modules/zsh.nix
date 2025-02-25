@@ -243,9 +243,6 @@ function condas() {
   if [[ -n "$env_name" ]]; then
     # Activate the selected conda environment
     conda activate "$env_name"
-    
-    # Open Neovim in the current directory
-    nvim .
   else
     echo "No environment selected."
   fi

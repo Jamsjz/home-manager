@@ -35,6 +35,7 @@
     proteus
     hybridreverb2
     mooSpace
+    kaggle
     fverb
     guitarix
     lsp-plugins
