@@ -230,10 +230,13 @@ function zle-keymap-select() {
 }
 
 function condas() {
-  conda activate "$(conda info --envs | tail -n +3 | fzf --prompt='🌟 Select Environment: ' --select-1 --height=40% --border --margin=1 --padding=1 --info=inline | awk '{print $1}')"
+  current_dir=$(basename "$PWD")
+  if conda info --envs | grep -q "^$current_dir"; then
+    conda activate "$current_dir"
+  else
+    conda activate "$(conda info --envs | tail -n +3 | fzf --prompt='🌟 Select Environment: ' --select-1 --height=40% --border --margin=1 --padding=1 --info=inline | awk '{print $1}')"
+  fi
 }
-
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
