@@ -197,11 +197,7 @@ source $HOME/.local/share/bin/_zsh-completions
 
 # vim mode
 bindkey -v
-#export KEYTIMEOUT=3 
-
-
-
-# Function to paste from the clipboard in normal mode
+#export KEYTIMEOUT=3... # Function to paste from the clipboard in normal mode
 function vi-paste-clipboard() {
     local content=$(wl-paste) # Get the clipboard content
     LBUFFER+="$content" # Append it to the left buffer (where command is typed)
@@ -233,20 +229,11 @@ function zle-keymap-select() {
   fi
 }
 
-
 function condas() {
-  # List conda environments and use fzf to select one
-  local env_name
-  env_name=$(conda env list | awk '{if(NR>3) print $1}' | fzf --height 40% --reverse --border)
-
-  # Check if an environment was selected
-  if [[ -n "$env_name" ]]; then
-    # Activate the selected conda environment
-    conda activate "$env_name"
-  else
-    echo "No environment selected."
-  fi
+  conda activate "$(conda info --envs | tail -n +3 | fzf --prompt='🌟 Select Environment: ' --select-1 --height=40% --border --margin=1 --padding=1 --info=inline | awk '{print $1}')"
 }
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -262,7 +249,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-if ls *.py &>/dev/null | ls *.ipynb &>/dev/null; then
+if [ -n "$CONDA_DEFAULT_ENV" ] && [ "$CONDA_DEFAULT_ENV" = "base" ]; then
   condas
 fi
     '';

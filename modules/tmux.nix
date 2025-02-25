@@ -96,8 +96,7 @@
       bind-key -T copy-mode-vi 'C-\' select-pane -l
 
       # #Tmux Default Shell
-      set-option -g default-shell "/home/viola/.nix-profile/bin/conda-shell -c zsh"
-
+      set-option -g default-shell "/home/viola/.local/share/bin/conda-shell"
 
       #open panes in current directory 
       bind '"' split-window -v -c "#{pane_current_path}"
